@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark absolute>
+      <v-toolbar-title>Zlecenie lekowe dla pacjenta</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <v-card mt-5 class="fill-height">
+        <v-tabs v-model="tab" centered>
+          <v-tab>Formularz</v-tab>
+          <v-tab>Historia</v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab">
+          <v-tab-item>
+            <Formularz @noweZlecenie="noweZlecenie($event)"></Formularz>
+          </v-tab-item>
+          <v-tab-item>
+            <Historia :zlecenia="zlecenia"></Historia>
+          </v-tab-item>
+        </v-tabs-items>
+      </v-card>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Formularz from "./components/Formularz";
+import Historia from "./components/Historia";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Formularz,
+    Historia
+  },
+
+  methods: {
+   noweZlecenie (zlecenie) {
+     this.zlecenia.push(zlecenie);
+   }
+},
+
+  data: () => ({
+    tab: null,
+    zlecenia: []
+  })
+};
+</script>

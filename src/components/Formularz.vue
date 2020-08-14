@@ -1,4 +1,5 @@
 <template>
+<v-container>
   <v-form @submit.prevent="submit">
     <v-card-text>
       <!-- IMIE -->
@@ -127,6 +128,7 @@
       <v-btn @click="clear">clear</v-btn>
     </v-card-actions>
   </v-form>
+</v-container>
 </template>
 
 

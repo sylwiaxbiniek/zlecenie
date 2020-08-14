@@ -9,8 +9,8 @@
           <th class="text-left">Oddział</th>
           <th class="text-left">Nazwa Leku</th>
           <th class="text-left">Ilość</th>
-          <th class="text-left">Data</th>
-          <th class="text-left">Czas</th>
+          <th class="text-left">Data podania</th>
+          <th class="text-left">Pora podania</th>
         </tr>
       </thead>
       <tbody>

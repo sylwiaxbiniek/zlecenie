@@ -95,8 +95,8 @@
             </template>
             <v-date-picker v-model="data" no-title scrollable>
               <v-spacer></v-spacer>
-              <v-btn depressed color="primary" @click="menu_data = false">Cancel</v-btn>
-              <v-btn depressed color="primary"  @click="$refs.menu_data.save(data)">OK</v-btn>
+              <v-btn depressed color="primary" @click="menu_data = false">wyjdź</v-btn>
+              <v-btn depressed color="primary"  @click="$refs.menu_data.save(data)">zapisz</v-btn>
             </v-date-picker>
           </v-menu>
 

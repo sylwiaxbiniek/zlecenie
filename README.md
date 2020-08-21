@@ -1,5 +1,7 @@
 # zlecenie
 
+Panel tworzenia zlecenia lekowego dla pacjenta
+
 ## Project setup
 ```
 npm install
